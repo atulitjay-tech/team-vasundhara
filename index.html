@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Vasundhara — ECE × EEE Cultural Program</title>
+<meta name="description" content="Rang, Raag, Riwayat. Team Vasundhara is the joint ECE × EEE North Indian cultural production at BIT Mesra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mukta:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-item-left" aria-label="BIT Mesra">
+      <img src="assets/bit-mesra-logo.png" alt="BIT Mesra logo" class="bit-logo-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span class="bit-logo-fallback">BIT<br>MESRA</span>
+    </a>
+    <a href="#top" class="nav-team-name">Team Vasundhara</a>
+    <a href="#top" class="nav-item-right" aria-label="Team logo — coming soon">
+      <span class="team-logo-circle"></span>
+    </a>
+  </div>
+</nav>
+
+<section id="top" class="hero">
+  <div class="string-line"></div>
+  <div class="bunting"><div class="bunting-row" id="buntingRow"></div></div>
+
+  <svg class="mandala" viewBox="0 0 400 400" aria-hidden="true">
+    <g fill="none" stroke="url(#mg)" stroke-width="1.4">
+      <circle cx="200" cy="200" r="170"/>
+      <circle cx="200" cy="200" r="140"/>
+      <circle cx="200" cy="200" r="60"/>
+      <g id="petals"></g>
+    </g>
+    <defs>
+      <linearGradient id="mg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FFB100"/>
+        <stop offset="50%" stop-color="#E31C79"/>
+        <stop offset="100%" stop-color="#017A72"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="embers" id="embers"></div>
+
+  <div class="hero-content">
+    <span class="eyebrow on-dark">⚡ ECE × EEE Joint Cultural Production</span>
+    <h1>TEAM<br>VASUNDHARA</h1>
+    <p class="hero-slogan">
+      <span class="s-rang">Rang</span><span class="s-dot">·</span><span class="s-raag">Raag</span><span class="s-dot">·</span><span class="s-riwayat">Riwayat</span>
+    </p>
+    <div class="hero-flourish" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="hero-cta">
+      <a href="#programme" class="btn btn-primary">Programme Details</a>
+      <a href="#incharges" class="btn btn-ghost">Meet the Team</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section id="programme" class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Programme Details</span>
+      <h2>Know Before You Go</h2>
+      <p>Full event details will be added here soon — here's what's locked in so far.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-icon">📅</span>
+        <span class="info-label">Date</span>
+        <span class="info-value">To be announced</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">🕒</span>
+        <span class="info-label">Time</span>
+        <span class="info-value">To be announced</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">📍</span>
+        <span class="info-label">Venue</span>
+        <span class="info-value">To be announced</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">🎭</span>
+        <span class="info-label">Theme</span>
+        <span class="info-value">North Indian Culture</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">👑</span>
+        <span class="info-label">Chief Guest</span>
+        <span class="info-value">To be announced</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">📝</span>
+        <span class="info-label">Registration</span>
+        <span class="info-value">Details coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rangoli"></div>
+
+<section id="incharges" class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Team In-Charges</span>
+      <h2>The Faces Behind <span class="grad-text">Vasundhara</span></h2>
+    </div>
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="core">Core &amp; Tech</button>
+      <button class="filter-btn" data-filter="performance">Performance</button>
+      <button class="filter-btn" data-filter="ops">Operations &amp; Media</button>
+    </div>
+    <div class="roster-grid" id="rosterGrid">
+      <div class="roster-card" data-cat="core"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Overall Event Management</p><span class="r-cat">Core Lead</span></div>
+      <div class="roster-card" data-cat="core"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Web Lead</p><span class="r-cat">Tech</span></div>
+      <div class="roster-card" data-cat="core"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Web Designer</p><span class="r-cat">Tech</span></div>
+      <div class="roster-card" data-cat="performance"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Dance Head</p><span class="r-cat">Performance</span></div>
+      <div class="roster-card" data-cat="performance"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Dance Head</p><span class="r-cat">Performance</span></div>
+      <div class="roster-card" data-cat="performance"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Music Head</p><span class="r-cat">Performance</span></div>
+      <div class="roster-card" data-cat="performance"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Fashion Show Head</p><span class="r-cat">Performance</span></div>
+      <div class="roster-card" data-cat="performance"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Poetry Head</p><span class="r-cat">Performance</span></div>
+      <div class="roster-card" data-cat="ops"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Anchoring &amp; BIT-Talk Head</p><span class="r-cat">Stage</span></div>
+      <div class="roster-card" data-cat="ops"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Decoration Head</p><span class="r-cat">Production</span></div>
+      <div class="roster-card" data-cat="ops"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Logistics Head</p><span class="r-cat">Operations</span></div>
+      <div class="roster-card" data-cat="ops"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Felicitation &amp; Refreshment Head</p><span class="r-cat">Hospitality</span></div>
+      <div class="roster-card" id="adritoCard" data-cat="ops"><div class="r-avatar"><span>?</span></div><h3>Add Name</h3><p class="r-name">Movie &amp; Reels Head</p><span class="r-cat">Media</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="rangoli"></div>
+
+<section id="participants" class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Participants</span>
+      <h2>Meet the <span class="grad-text">Performers</span></h2>
+      <p>The full participant list will be updated here soon.</p>
+    </div>
+    <div class="participant-list">
+      <div class="participant-row participant-head">
+        <span>Name</span><span>Department</span><span>Act</span>
+      </div>
+      <div class="participant-scroll">
+        <div class="participant-row"><span>To be added</span><span>To be added</span><span>To be added</span></div>
+        <div class="participant-row"><span>To be added</span><span>To be added</span><span>To be added</span></div>
+        <div class="participant-row"><span>To be added</span><span>To be added</span><span>To be added</span></div>
+        <div class="participant-row"><span>To be added</span><span>To be added</span><span>To be added</span></div>
+        <div class="participant-row"><span>To be added</span><span>To be added</span><span>To be added</span></div>
+        <div class="participant-row"><span>To be added</span><span>To be added</span><span>To be added</span></div>
+        <div class="participant-row"><span>To be added</span><span>To be added</span><span>To be added</span></div>
+        <div class="participant-row"><span>To be added</span><span>To be added</span><span>To be added</span></div>
+      </div>
+    </div>
+    <p class="roster-note">Participant names will be added closer to the event.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="rangoli dark" style="margin-bottom:36px;"></div>
+  <div class="wrap">
+    <div class="footer-logo">VASUNDHARA</div>
+    <p class="footer-slogan">Rang · Raag · Riwayat</p>
+    <div class="footer-links">
+      <a href="#top">Top</a>
+      <a href="#programme">Programme</a>
+      <a href="#incharges">In-Charges</a>
+      <a href="#participants">Participants</a>
+    </div>
+    <p class="footer-note">ECE × EEE Joint Cultural Program — Birla Institute of Technology, Mesra · Cultural Program 2026</p>
+    <p class="footer-credit">Engineered with <b>rang and rhythm</b> by the ECE &amp; EEE batch of 2026.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

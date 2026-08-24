@@ -1,0 +1,288 @@
+:root{
+  --marigold:#FF7A00;
+  --saffron:#FFB100;
+  --rani:#E31C79;
+  --peacock:#017A72;
+  --peacock-deep:#014f4a;
+  --indigo:#1A1035;
+  --indigo-2:#2A1750;
+  --ivory:#FFF8ED;
+  --ink:#2A1B3D;
+  --paper:#FFFDF8;
+  --line:rgba(42,27,61,0.12);
+  --shadow: 0 10px 30px rgba(26,16,53,0.18);
+  --ease: cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--ivory);
+  color:var(--ink);
+  font-family:'Mukta',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Baloo 2',sans-serif;margin:0;line-height:1.08;}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Poppins',sans-serif;font-weight:600;font-size:12.5px;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--rani);
+}
+.eyebrow.on-dark{color:var(--saffron);}
+.eyebrow::before{content:"";width:18px;height:2px;background:currentColor;border-radius:2px;}
+.grad-text{
+  background:linear-gradient(100deg,var(--marigold) 0%, var(--rani) 55%, var(--peacock) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+.section{padding:96px 0;position:relative;}
+.section-head{max-width:620px;margin:0 auto 52px;text-align:center;}
+.section-head h2{font-size:clamp(28px,4.4vw,42px);margin-top:10px;}
+.section-head p{margin-top:14px;color:#5b4a6b;font-size:16.5px;}
+.section-head.on-dark p{color:#cdbfe4;}
+
+:focus-visible{outline:3px solid var(--rani);outline-offset:3px;border-radius:4px;}
+
+/* ---------- Rangoli divider ---------- */
+.rangoli{
+  height:26px;width:100%;
+  background-repeat:repeat-x;background-position:center;background-size:52px 26px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='26' viewBox='0 0 52 26'%3E%3Cg fill='none' stroke='%23E31C79' stroke-width='1.6'%3E%3Ccircle cx='26' cy='13' r='4' fill='%23FFB100' stroke='none'/%3E%3Cpath d='M26 3c3 4 3 6 0 10c-3-4-3-6 0-10z' fill='%23FF7A00'/%3E%3Cpath d='M26 23c3-4 3-6 0-10c-3 4-3 6 0 10z' fill='%23FF7A00'/%3E%3Cpath d='M16 13c4-3 6-3 10 0c-4 3-6 3-10 0z' fill='%23017A72'/%3E%3Cpath d='M36 13c-4-3-6-3-10 0c4 3 6 3 10 0z' fill='%23017A72'/%3E%3C/g%3E%3C/svg%3E");
+}
+.rangoli.dark{opacity:.9;}
+
+/* ---------- Header ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(26,16,53,0.9);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.nav-inner{
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  padding:20px 28px;max-width:1140px;margin:0 auto;gap:16px;
+}
+.nav-item-left{justify-self:start;display:flex;align-items:center;}
+.nav-item-right{justify-self:end;display:flex;align-items:center;}
+.bit-logo-img{
+  height:60px;width:60px;border-radius:50%;object-fit:cover;
+  background:#fff;padding:5px;box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+.bit-logo-fallback{
+  display:none;height:60px;width:60px;border-radius:50%;background:#fff;
+  align-items:center;justify-content:center;flex-direction:column;
+  font-family:'Poppins',sans-serif;font-weight:700;font-size:10.5px;line-height:1.25;
+  letter-spacing:.02em;color:var(--indigo);text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+.team-logo-circle{
+  height:60px;width:60px;border-radius:50%;background:#fff;display:block;
+  box-shadow:0 4px 10px rgba(0,0,0,0.25), inset 0 0 0 2px rgba(0,0,0,0.04);
+}
+.nav-team-name{
+  justify-self:center;text-align:center;white-space:nowrap;
+  font-family:'Baloo 2',sans-serif;font-weight:800;font-size:clamp(19px,3.6vw,28px);
+  color:var(--ivory);letter-spacing:.01em;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 30% 0%, #3a1f66 0%, var(--indigo) 55%, #120a26 100%);
+  padding:150px 0 90px;min-height:100vh;
+  display:flex;align-items:center;
+}
+.bunting{position:absolute;top:96px;left:0;right:0;display:flex;justify-content:center;pointer-events:none;z-index:2;}
+.bunting-row{display:flex;gap:2px;}
+.flag{
+  width:26px;height:34px;
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  transform-origin:top center;
+  animation:sway 3.4s ease-in-out infinite;
+  box-shadow:0 2px 4px rgba(0,0,0,0.25);
+}
+@keyframes sway{
+  0%,100%{transform:rotate(-4deg);}
+  50%{transform:rotate(4deg);}
+}
+.string-line{position:absolute;top:96px;left:0;right:0;height:2px;background:rgba(255,255,255,0.25);z-index:1;}
+
+.mandala{
+  position:absolute;top:50%;left:50%;
+  width:min(880px,140vw);height:min(880px,140vw);
+  transform:translate(-50%,-50%);
+  opacity:.16;animation:spin-slow 90s linear infinite;z-index:0;
+}
+@keyframes spin-slow{to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+.embers{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.ember{position:absolute;bottom:-20px;border-radius:50%;opacity:.85;animation:floatUp linear infinite;}
+
+@keyframes floatUp{
+  0%{transform:translateY(0) translateX(0);opacity:0;}
+  10%{opacity:.85;}
+  100%{transform:translateY(-620px) translateX(var(--drift,20px));opacity:0;}
+}
+
+.hero-content{position:relative;z-index:3;max-width:760px;margin:0 auto;text-align:center;padding:0 24px;}
+.hero-content .eyebrow{margin-bottom:22px;}
+.hero-content h1{
+  font-size:clamp(52px,10vw,104px);font-weight:800;color:var(--ivory);
+  letter-spacing:.01em;
+}
+.hero-slogan{
+  font-family:'Baloo 2';font-weight:700;font-size:clamp(19px,2.8vw,27px);
+  margin-top:20px;display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;
+}
+.hero-slogan .s-dot{color:rgba(255,255,255,0.35);font-weight:400;}
+.hero-slogan .s-rang{color:var(--marigold);}
+.hero-slogan .s-raag{color:var(--rani);}
+.hero-slogan .s-riwayat{color:var(--saffron);}
+.hero-flourish{display:flex;gap:14px;justify-content:center;align-items:center;margin-top:36px;}
+.hero-flourish span{
+  width:8px;height:8px;border-radius:2px;transform:rotate(45deg);
+  background:linear-gradient(135deg,var(--marigold),var(--rani));
+}
+.hero-flourish span:nth-child(2){width:12px;height:12px;background:linear-gradient(135deg,var(--saffron),var(--peacock));}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:36px;}
+.btn{
+  padding:15px 30px;border-radius:999px;font-family:'Poppins';font-weight:600;font-size:14.5px;
+  transition:transform .2s var(--ease), box-shadow .2s var(--ease);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary{
+  background:linear-gradient(100deg,var(--marigold),var(--rani));color:#fff;
+  box-shadow:0 10px 24px rgba(227,28,121,0.4);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(227,28,121,0.5);}
+.btn-ghost{
+  border:1.5px solid rgba(255,255,255,0.35);color:#fff;
+}
+.btn-ghost:hover{background:rgba(255,255,255,0.1);transform:translateY(-3px);}
+
+.scroll-cue{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  width:22px;height:34px;border:2px solid rgba(255,255,255,0.4);border-radius:14px;z-index:3;
+}
+.scroll-cue::after{
+  content:"";position:absolute;top:6px;left:50%;width:4px;height:8px;margin-left:-2px;
+  background:var(--saffron);border-radius:2px;animation:cue 1.6s ease-in-out infinite;
+}
+@keyframes cue{0%{opacity:1;transform:translateY(0);}80%{opacity:0;transform:translateY(10px);}100%{opacity:0;}}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease), transform .7s var(--ease);}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+
+/* ---------- Programme details ---------- */
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.info-card{
+  background:var(--paper);border-radius:18px;padding:26px 20px;text-align:center;
+  box-shadow:var(--shadow);border:1px dashed var(--line);
+  display:flex;flex-direction:column;gap:8px;align-items:center;
+}
+.info-icon{font-size:26px;}
+.info-label{
+  font-family:'Poppins';font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--rani);
+}
+.info-value{font-size:15.5px;color:var(--ink);font-weight:500;}
+
+/* ---------- Team In-Charges ---------- */
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px;}
+.filter-btn{
+  padding:9px 18px;border-radius:999px;font-family:'Poppins';font-weight:600;font-size:13px;
+  border:1.5px solid var(--line);color:var(--ink);transition:all .2s var(--ease);
+}
+.filter-btn.active{background:linear-gradient(100deg,var(--marigold),var(--rani));color:#fff;border-color:transparent;}
+.roster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.roster-card{
+  background:var(--paper);border-radius:18px;padding:26px 18px;text-align:center;
+  box-shadow:var(--shadow);transition:transform .25s var(--ease);
+}
+.roster-card:hover{transform:translateY(-6px);}
+.r-avatar{
+  width:66px;height:66px;border-radius:50%;margin:0 auto 14px;
+  display:flex;align-items:center;justify-content:center;font-size:26px;
+  background:conic-gradient(from 180deg, var(--marigold), var(--rani), var(--peacock), var(--marigold));
+  box-shadow:0 0 0 4px var(--paper), 0 0 0 6px rgba(227,28,121,0.25);
+}
+.r-avatar span{background:var(--paper);width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:var(--rani);letter-spacing:.01em;}
+.roster-card h3{font-size:15.5px;font-family:'Poppins';font-weight:600;margin-bottom:4px;}
+.roster-card .r-name{font-size:13px;color:#9a86ac;font-style:italic;margin-bottom:8px;}
+.r-cat{
+  display:inline-block;font-family:'Poppins';font-size:10.5px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;padding:3px 10px;border-radius:999px;background:rgba(1,122,114,0.1);color:var(--peacock);
+}
+.roster-card.hide{display:none;}
+#adritoCard{grid-column:1 / -1;justify-self:center;width:calc((100% - 60px) / 4);}
+.roster-note{text-align:center;margin-top:36px;font-size:13.5px;color:#9a86ac;}
+
+/* ---------- Participants ---------- */
+.participant-list{
+  max-width:760px;margin:0 auto;border-radius:16px;overflow:hidden;
+  box-shadow:var(--shadow);border:1px dashed var(--line);
+}
+.participant-scroll{
+  max-height:380px;overflow-y:auto;
+  scrollbar-width:thin;scrollbar-color:var(--rani) #f1e6d6;
+}
+.participant-scroll::-webkit-scrollbar{width:8px;}
+.participant-scroll::-webkit-scrollbar-track{background:#f1e6d6;}
+.participant-scroll::-webkit-scrollbar-thumb{background:var(--rani);border-radius:8px;}
+.participant-row{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:12px;
+  padding:14px 20px;background:var(--paper);font-size:14.5px;color:var(--ink);
+}
+.participant-row:nth-child(even){background:#fdf3e4;}
+.participant-row.participant-head{
+  position:sticky;top:0;z-index:2;
+  background:var(--indigo);color:#fff;font-family:'Poppins';font-weight:600;font-size:12px;
+  letter-spacing:.08em;text-transform:uppercase;
+}
+.participant-row span:not(:first-child){color:#9a86ac;font-style:italic;}
+.participant-row.participant-head span{color:#fff;font-style:normal;}
+
+/* ---------- Footer ---------- */
+footer{background:var(--indigo);color:#cdbfe4;padding:56px 0 30px;text-align:center;}
+.footer-logo{font-family:'Baloo 2';font-weight:800;font-size:26px;color:#fff;}
+.footer-slogan{
+  font-family:'Baloo 2';font-weight:600;font-size:14px;margin-top:8px;
+  color:var(--saffron);letter-spacing:.04em;
+}
+.footer-links{display:flex;gap:24px;justify-content:center;margin:22px 0;flex-wrap:wrap;font-family:'Poppins';font-size:13.5px;}
+.footer-links a:hover{color:var(--saffron);}
+.footer-note{font-size:13px;max-width:460px;margin:0 auto;color:#9a86ac;}
+.footer-credit{margin-top:22px;font-size:12.5px;color:#7a688f;}
+.footer-credit b{color:#b7a4d6;}
+
+@media(max-width:860px){
+  .info-grid{grid-template-columns:repeat(2,1fr);}
+  .roster-grid{grid-template-columns:repeat(2,1fr);}
+  #adritoCard{width:calc((100% - 20px) / 2);}
+}
+@media(max-width:640px){
+  .nav-inner{padding:14px 18px;gap:8px;}
+  .bit-logo-img,.bit-logo-fallback,.team-logo-circle{height:46px;width:46px;}
+  .nav-team-name{font-size:17px;}
+  .participant-row{grid-template-columns:1.2fr 1fr 1fr;padding:12px 14px;font-size:13px;}
+}
+@media(max-width:520px){
+  .section{padding:70px 0;}
+  .info-grid{grid-template-columns:1fr;}
+  .roster-grid{grid-template-columns:repeat(2,1fr);}
+  #adritoCard{width:calc((100% - 20px) / 2);}
+  .hero{padding-top:130px;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;}
+}
