@@ -73,7 +73,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .nav-item-right{justify-self:end;display:flex;align-items:center;}
 .bit-logo-img{
   height:60px;width:60px;border-radius:50%;object-fit:cover;
-  background:#fff;padding:5px;box-shadow:0 4px 10px rgba(0,0,0,0.25);
+  background:#fff;padding:0 px;box-shadow:0 4px 10px rgba(0,0,0,0.25);
 }
 .bit-logo-fallback{
   display:none;height:60px;width:60px;border-radius:50%;background:#fff;
